@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		A074796E2FB6338D0006B50F /* LingeFlowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LingeFlowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A074796E2FB6338D0006B50F /* Linge Flow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Linge Flow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0DDDC722FB8D1C1004765D3 /* LingeFlow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LingeFlow.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A0DDDC712FB8D159004765D3 /* Exceptions for "LingeFlowApp" folder in "Linge Flow" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A074796D2FB6338D0006B50F /* Linge Flow */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A07479702FB6338D0006B50F /* LingeFlowApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A0DDDC712FB8D159004765D3 /* Exceptions for "LingeFlowApp" folder in "Linge Flow" target */,
+			);
 			path = LingeFlowApp;
 			sourceTree = "<group>";
 		};
@@ -32,6 +46,7 @@
 		A07479652FB6338D0006B50F = {
 			isa = PBXGroup;
 			children = (
+				A0DDDC722FB8D1C1004765D3 /* LingeFlow.entitlements */,
 				A07479702FB6338D0006B50F /* LingeFlowApp */,
 				A074796F2FB6338D0006B50F /* Products */,
 			);
@@ -40,7 +55,7 @@
 		A074796F2FB6338D0006B50F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A074796E2FB6338D0006B50F /* LingeFlowApp.app */,
+				A074796E2FB6338D0006B50F /* Linge Flow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +63,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A074796D2FB6338D0006B50F /* LingeFlowApp */ = {
+		A074796D2FB6338D0006B50F /* Linge Flow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A07479792FB633910006B50F /* Build configuration list for PBXNativeTarget "LingeFlowApp" */;
+			buildConfigurationList = A07479792FB633910006B50F /* Build configuration list for PBXNativeTarget "Linge Flow" */;
 			buildPhases = (
 				A074796A2FB6338D0006B50F /* Sources */,
 				A074796B2FB6338D0006B50F /* Frameworks */,
@@ -63,11 +78,11 @@
 			fileSystemSynchronizedGroups = (
 				A07479702FB6338D0006B50F /* LingeFlowApp */,
 			);
-			name = LingeFlowApp;
+			name = "Linge Flow";
 			packageProductDependencies = (
 			);
 			productName = LingeFlowApp;
-			productReference = A074796E2FB6338D0006B50F /* LingeFlowApp.app */;
+			productReference = A074796E2FB6338D0006B50F /* Linge Flow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -86,11 +101,12 @@
 				};
 			};
 			buildConfigurationList = A07479692FB6338D0006B50F /* Build configuration list for PBXProject "LingeFlowApp" */;
-			developmentRegion = en;
+			developmentRegion = fr;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = A07479652FB6338D0006B50F;
 			minimizedProjectReferenceProxies = 1;
@@ -99,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A074796D2FB6338D0006B50F /* LingeFlowApp */,
+				A074796D2FB6338D0006B50F /* Linge Flow */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +262,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = LingeFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R4J5U68SR8;
@@ -254,6 +272,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LingeFlowApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -268,8 +288,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lux-Audere.LingeFlowApp";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxaudere.lingeflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -290,6 +310,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = LingeFlow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R4J5U68SR8;
@@ -298,6 +320,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LingeFlowApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,8 +336,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Lux-Audere.LingeFlowApp";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxaudere.lingeflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -341,7 +365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A07479792FB633910006B50F /* Build configuration list for PBXNativeTarget "LingeFlowApp" */ = {
+		A07479792FB633910006B50F /* Build configuration list for PBXNativeTarget "Linge Flow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A074797A2FB633910006B50F /* Debug */,
