@@ -16,8 +16,13 @@ struct EarlyCompletionConfirmationDialog: View {
         ZStack {
             Color.black.opacity(0.28).ignoresSafeArea().onTapGesture(perform: onCancel)
             VStack(spacing: 16) {
-                Text("Marquer comme faite ?").font(.title3.bold())
-                Text("“\(routineName)” est prévue plus tard. La prochaine date sera recalculée depuis aujourd’hui.").multilineTextAlignment(.center)
+                Text("Marquer comme faite ?")
+                    .font(.title3.bold())
+                    .foregroundStyle(Color.lingeInk)
+
+                Text("“\(routineName)” est prévue plus tard. La prochaine date sera recalculée depuis aujourd’hui.")
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(Color.lingeMuted)
                 Button(action: onConfirm) {
                     HStack(spacing: 8) {
                         Image(systemName: "checkmark")
@@ -51,7 +56,7 @@ struct EarlyCompletionConfirmationDialog: View {
                         .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                 }
                 .buttonStyle(.plain)
-            }.padding(24).background(.white).clipShape(RoundedRectangle(cornerRadius: 24)).padding(24)
+            }.padding(24).background(Color.lingeSurface).clipShape(RoundedRectangle(cornerRadius: 24)).padding(24)
         }
     }
 }

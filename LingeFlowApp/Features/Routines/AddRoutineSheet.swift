@@ -29,7 +29,7 @@ struct AddRoutineView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color.white
+            Color.lingeBackground
                 .ignoresSafeArea()
 
             ScrollView(showsIndicators: false) {
@@ -45,7 +45,7 @@ struct AddRoutineView: View {
                             .textFieldStyle(.plain)
                             .padding(.horizontal, 16)
                             .frame(height: 54)
-                            .background(Color.white)
+                            .background(Color.lingeSurface)
                             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                             .overlay {
                                 RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -191,10 +191,10 @@ struct AddRoutineView: View {
         } label: {
             Text("Créer la routine")
                 .font(.system(size: 17, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(canSave ? .white : Color.lingeDisabledText)
                 .frame(maxWidth: .infinity)
                 .frame(height: 54)
-                .background(canSave ? Color.lingePurple : Color.lingeMuted.opacity(0.45))
+                .background(canSave ? Color.lingePurple : Color.lingeDisabledFill)
                 .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                 .shadow(color: Color.lingePurple.opacity(canSave ? 0.28 : 0), radius: 12, x: 0, y: 6)
         }
@@ -204,7 +204,7 @@ struct AddRoutineView: View {
         .padding(.bottom, 22)
         .background(
             LinearGradient(
-                colors: [.white.opacity(0), .white, .white],
+                colors: [Color.lingeBackground.opacity(0), Color.lingeBackground, Color.lingeBackground],
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -272,7 +272,7 @@ struct EditRoutineView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            Color.white
+            Color.lingeBackground
                 .ignoresSafeArea()
 
             ScrollView(showsIndicators: false) {
@@ -327,7 +327,7 @@ struct EditRoutineView: View {
                 .textFieldStyle(.plain)
                 .padding(.horizontal, 16)
                 .frame(height: 54)
-                .background(Color.white)
+                .background(Color.lingeSurface)
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .overlay {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -436,10 +436,10 @@ struct EditRoutineView: View {
         } label: {
             Text("Enregistrer")
                 .font(.system(size: 17, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(canSave ? .white : Color.lingeDisabledText)
                 .frame(maxWidth: .infinity)
                 .frame(height: 54)
-                .background(canSave ? Color.lingePurple : Color.lingeMuted.opacity(0.45))
+                .background(canSave ? Color.lingePurple : Color.lingeDisabledFill)
                 .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                 .shadow(color: Color.lingePurple.opacity(canSave ? 0.28 : 0), radius: 12, x: 0, y: 6)
         }
@@ -449,7 +449,7 @@ struct EditRoutineView: View {
         .padding(.bottom, 22)
         .background(
             LinearGradient(
-                colors: [.white.opacity(0), .white, .white],
+                colors: [Color.lingeBackground.opacity(0), Color.lingeBackground, Color.lingeBackground],
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -565,7 +565,7 @@ private struct CustomFrequencyControl: View {
         .padding(.leading, 18)
         .padding(.trailing, 12)
         .frame(height: 68)
-        .background(.white)
+        .background(Color.lingeSurface)
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -638,7 +638,7 @@ private struct StyledDatePickerRow: View {
                 .padding(.horizontal, 16)
                 .frame(height: 58)
                 .contentShape(Rectangle())
-                .background(.white)
+                .background(Color.lingeSurface)
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 .overlay {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -686,7 +686,6 @@ private struct StyledDatePickerRow: View {
                 .labelsHidden()
                 .datePickerStyle(.wheel)
                 .environment(\.locale, Locale(identifier: "fr_FR"))
-                .environment(\.colorScheme, .light)
                 .tint(Color.lingePurple)
                 .frame(maxWidth: .infinity)
                 .frame(height: pickerHeight)
@@ -696,7 +695,6 @@ private struct StyledDatePickerRow: View {
                 .labelsHidden()
                 .datePickerStyle(.wheel)
                 .environment(\.locale, Locale(identifier: "fr_FR"))
-                .environment(\.colorScheme, .light)
                 .tint(Color.lingePurple)
                 .frame(maxWidth: .infinity)
                 .frame(height: pickerHeight)

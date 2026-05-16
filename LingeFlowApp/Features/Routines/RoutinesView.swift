@@ -26,7 +26,7 @@ struct RoutinesView: View {
                             if routine.id != filteredRoutines.last?.id { Divider().padding(.leading, 86) }
                         }
                     }
-                    .background(.white).clipShape(RoundedRectangle(cornerRadius: 18))
+                    .background(Color.lingeSurface).clipShape(RoundedRectangle(cornerRadius: 18))
                     .overlay { RoundedRectangle(cornerRadius: 18).stroke(Color.black.opacity(0.06), lineWidth: 1) }
                 }
                 AddRoutineButton(onAddRoutine: onAddRoutine)
@@ -40,7 +40,7 @@ struct RoutinePlaceholderCard: View {
     let message: String
     var body: some View {
         Text(message).font(.system(size: 15, weight: .medium)).foregroundStyle(Color.lingeMuted).frame(maxWidth: .infinity, alignment: .leading)
-            .padding(18).background(.white).clipShape(RoundedRectangle(cornerRadius: 18))
+            .padding(18).background(Color.lingeSurface).clipShape(RoundedRectangle(cornerRadius: 18))
             .overlay { RoundedRectangle(cornerRadius: 18).stroke(Color.black.opacity(0.06), lineWidth: 1) }
     }
 }
@@ -111,6 +111,6 @@ private struct RoutineListRow: View {
             }.foregroundStyle(Color.lingeInk)
             Spacer()
             Image(systemName: "chevron.right").foregroundStyle(Color.lingeTabMuted)
-        }.padding(.horizontal, 18).padding(.vertical, 12).background(.white)
+        }.padding(.horizontal, 18).padding(.vertical, 12).background(Color.lingeSurface)
     }
 }

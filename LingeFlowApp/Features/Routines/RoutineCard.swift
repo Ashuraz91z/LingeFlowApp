@@ -30,7 +30,7 @@ struct RoutineCard: View {
                     if isCompleted {
                         LinearGradient(colors: [Color.lingeDoneStart, Color.lingeDoneEnd], startPoint: .topLeading, endPoint: .bottomTrailing)
                     } else {
-                        Color.white
+                        Color.lingeSurface
                     }
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 13))
@@ -38,7 +38,7 @@ struct RoutineCard: View {
             }.buttonStyle(.plain)
         }
         .padding(.horizontal, 17).padding(.vertical, 18)
-        .background(routine.isDueToday ? .white : .clear).clipShape(RoundedRectangle(cornerRadius: 18))
+        .background(routine.isDueToday ? Color.lingeSurface : .clear).clipShape(RoundedRectangle(cornerRadius: 18))
         .shadow(color: routine.isDueToday ? Color.black.opacity(0.05) : .clear, radius: 12, x: 0, y: 6)
     }
     private func handleCompleteTap() { routine.isDueToday ? completeWithAnimation() : onEarlyCompletion() }

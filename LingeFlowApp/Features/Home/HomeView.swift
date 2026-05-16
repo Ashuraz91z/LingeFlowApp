@@ -38,7 +38,7 @@ struct HomeView: View {
                                     if routine.id != upcomingRoutines.last?.id { Divider().padding(.leading, 96) }
                                 }
                             }
-                            .background(.white).clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                            .background(Color.lingeSurface).clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
                             .shadow(color: Color.black.opacity(0.05), radius: 12, x: 0, y: 6)
                             .overlay { RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Color.black.opacity(0.06), lineWidth: 1) }
                         }
@@ -76,7 +76,7 @@ struct EmptyRoutineSection: View {
                 Text("Ajouter une routine").font(.system(size: 16, weight: .bold)).foregroundStyle(.white).frame(maxWidth: .infinity).frame(height: 52).background(Color.lingePurple).clipShape(RoundedRectangle(cornerRadius: 14))
             }.buttonStyle(.plain)
         }
-        .padding(22).frame(maxWidth: .infinity).background(.white).clipShape(RoundedRectangle(cornerRadius: 18))
+        .padding(22).frame(maxWidth: .infinity).background(Color.lingeSurface).clipShape(RoundedRectangle(cornerRadius: 18))
         .shadow(color: Color.black.opacity(0.05), radius: 12, x: 0, y: 6)
         .overlay { RoundedRectangle(cornerRadius: 18).stroke(Color.black.opacity(0.06), lineWidth: 1) }
     }

@@ -31,7 +31,7 @@ struct MainTabBar: View {
             }
         }
         .padding(.horizontal, 18).padding(.top, 8).padding(.bottom, 10)
-        .background(.white)
+        .background(Color.lingeSurface)
         .overlay(alignment: .top) { Divider().opacity(0.35) }
     }
 }

@@ -175,7 +175,7 @@ private struct SettingsHeaderCard: View {
             Spacer(minLength: 0)
         }
         .padding(18)
-        .background(.white)
+        .background(Color.lingeSurface)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
@@ -206,7 +206,7 @@ private struct SettingsSection<Content: View>: View {
             VStack(spacing: 0) {
                 content
             }
-            .background(.white)
+            .background(Color.lingeSurface)
             .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
             .overlay {
                 RoundedRectangle(cornerRadius: 18, style: .continuous)
@@ -527,4 +527,3 @@ private struct LegalSection: Identifiable {
     let title: String
     let body: String
 }
-
